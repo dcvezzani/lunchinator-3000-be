@@ -1,4 +1,4 @@
-# lunchinator-3000-02
+# lunchinator-3000-be
 
 ## Project setup
 ```
