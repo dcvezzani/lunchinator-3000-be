@@ -40,7 +40,7 @@ const checkBallotStatus = (ballotId, callback) => {
     if (err) return callback(err);
 
     const { ballot, choices } = data;
-    const ballotEndTime = getEndDate(ballot.endTime); // todo:
+    const ballotEndTime = getEndDate(ballot.endTime);
     const currentTime = moment();
 
     // console.log( ">>> ballot expired?", currentTime > ballotEndTime, formatTime(currentTime), formatTime(ballotEndTime));

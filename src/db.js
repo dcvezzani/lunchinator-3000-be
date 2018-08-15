@@ -4,9 +4,6 @@ import changeCase from "change-case";
 import _ from "lodash";
 
 export const postProcessResponse = result => {
-  // todo: only returning the last id for inserted record in a batch
-  // todo: find better way of identifying result sets from inserts/updates/deletes
-  // if (_.isArray(result) && result.length > 0 && result[0].toString().match(/^[0-9]+$/)) return {newIds: result};
   if (_.isArray(result)) return result.map(row => toCamel(row));
   return toCamel(result);
 };

@@ -1,22 +1,6 @@
 import db from "../db";
 const uuidv1 = require("uuid/v1");
 
-// export const getVotes = (guid, callback) => {
-//   db("votes")
-//     .count('restaurantId as voteCount')
-//     .where({ ballotId: guid })
-//     .groupBy('restaurantId')
-//
-//     .asCallback((err, rows) => {
-//       if (err)
-//         return callback({
-//           msg: "Unable to fetch records",
-//           raw: err.toString()
-//         });
-//       callback(err, rows);
-//     });
-// };
-
 export const getBallot = (guid, callback) => {
   db("ballots")
     .select()
